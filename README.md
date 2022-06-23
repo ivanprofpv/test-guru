@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+В проекте есть два типа пользователей - Администраторы и пользователи.
+Администраторы и пользователи имеют разные уровни доступа.
 
-Things you may want to cover:
+Есть административная часть проекта и пользовательская.
+В административной части Администраторы могут создавать тесты, редактировать их или удалять.
+В пользовательской части Пользователи могут выбирать доступные тесты и проходить их.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Есть система входа (личный кабинет).
