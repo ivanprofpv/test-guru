@@ -1,10 +1,16 @@
 class Test < ApplicationRecord
 
-  class << self
-    def search_tests_category(category)
-      Test.joins("INNER JOIN categories ON tests.category_id = categories.id")
-          .where(categories: { title: category })
-          .order(title: :desc)
-          .pluck(:title)
+  belongs_to :category
+  belongs_to :author, class_name: 'User'
+  has_many :questions, dependent: :destroy
+  has_many :tests_passeds, dependent: nil
+  has_many :users, through: :tests_passeds
+
+    def self.search_tests_category(category)
+      joins(:category)
+      .where(categories: { title: category })
+      .order(title: :desc)
+      .pluck(:title)
     end
-  end
+
+end
