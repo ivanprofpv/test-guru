@@ -5,9 +5,6 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound,
               with: :rescue_with_questions_not_found
 
-  def index
-  end
-
   def show
   end
 
@@ -21,6 +18,15 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    @question = @test.questions.new
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to test_path(@question.test)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -43,7 +49,7 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_questions_not_found
-    render html: "Вопрос не найден!".html_safe
+    render html: "Question doesn't exist!".html_safe
   end
 
 end

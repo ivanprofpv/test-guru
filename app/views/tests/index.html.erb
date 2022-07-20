@@ -1,0 +1,7 @@
+<h1>Tricky tests</h1>
+
+<ul>
+  <% @tests.each do |test| %>
+    <li><%= test.title %> (<%= "#{test.questions.size}" %>)</li>
+  <% end %>
+</ul>
