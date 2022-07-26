@@ -3,8 +3,8 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User'
   has_many :questions, dependent: :destroy
-  has_many :tests_passeds, dependent: nil
-  has_many :users, through: :tests_passeds
+  has_many :tests_passages, dependent: nil
+  has_many :users, through: :tests_passages
 
   scope :level_easy, -> { where(level: 0..1) }
   scope :level_medium, -> { where(level: 2..4) }
