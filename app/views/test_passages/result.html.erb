@@ -1,0 +1,7 @@
+<h1><%= @test.title %> complited!</h1>
+
+<p class "<%= @test_passage.success_rate? ? 'succes' : 'failed' %>">Test passed on <%= @test_passage.percentage_correct_answers%> %</p>
+
+<p><%= @test_passage.success_rate? ? 'Test passed!' : 'Test failed!' %></p>
+
+<p><%= link_to 'Back', tests_path %></p>
