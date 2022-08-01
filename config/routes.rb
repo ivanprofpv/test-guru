@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
   get 'users/new'
 
   root 'tests#index'
 
   get :signup, to: 'users#new'
+  get :login, to: 'sessions#new'
 
   resource :users, only: :create
+  resource :sessions, only: :create
 
   resources :answers
   resources :tests do
