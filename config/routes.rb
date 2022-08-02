@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get :signup, to: 'users#new'
   get :login, to: 'sessions#new'
+  get :logout, to: 'sessions#delete'
 
   resource :users, only: :create
   resource :sessions, only: :create
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
     end
 
     member do
-      post :star
+      post :start, on: :member
     end
   end
 

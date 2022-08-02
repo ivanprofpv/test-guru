@@ -1,13 +1,17 @@
 class ApplicationController < ActionController::Base
 
-  helper_method :current_user
+  helper_method :current_user,
+                :logged_in?,
+                :logout
 
   private
 
   def authenticate_user!
     unless current_user
-      redirect_to login_path
+      return redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please!'
     end
+    #здесь можно поставить & и убрать return = работать будет также
+    cookies[:email] = current_user.email
   end
 
   def current_user
@@ -16,6 +20,10 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?
+  end
+
+  def cookie_path(path)
+    cookies[:path] = path
   end
 
 end
