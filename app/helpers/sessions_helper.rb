@@ -1,9 +1,9 @@
 module SessionsHelper
 
   def flash_message
-    if flash[:alert]
-      return content_tag :p, flash[:alert], class: "flash alert"
-    end
+    flash.map do |key_class, msg|
+      content_tag :div, msg, class: "flash #{key_class}"
+    end.join
   end
 
 end
