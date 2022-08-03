@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
 
   helper_method :current_user,
-                :logged_in?,
-                :logout
+                :logged_in?
 
   private
 
@@ -20,10 +19,6 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?
-  end
-
-  def cookie_path(path)
-    cookies[:path] = path
   end
 
 end
