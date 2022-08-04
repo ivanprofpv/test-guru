@@ -1,5 +1,13 @@
 class User < ApplicationRecord
 
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :trackable,
+         :confirmable
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   has_many :tests_passages, dependent: nil
@@ -8,10 +16,8 @@ class User < ApplicationRecord
   foreign_key: :author_id, dependent: :destroy
 
   validates :email, presence: true,
-                    uniqueness: true, 
+                    uniqueness: true,
                     format: { with: VALID_EMAIL_REGEX }
-
-  has_secure_password
 
   def tests_passage(test)
     tests_passages.order(id: :desc).find_by(test_id: test.id)

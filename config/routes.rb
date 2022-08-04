@@ -1,23 +1,18 @@
 Rails.application.routes.draw do
 
+  devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
   root 'tests#index'
 
-  get    :signup, to: 'users#new'
-  get    :login,  to: 'sessions#new'
   post   :login,  to: 'sessions#create'
   delete :logout, to: 'sessions#delete'
 
-  resource :users,    only: :create
-  resource :sessions, only: :create
-
-  resources :answers
   resources :tests do
     resources :questions, shallow: true, except: :index do
       resources :answers, shallow: true, except: :index
     end
 
     member do
-      post :start, on: :member
+      post :start
     end
   end
 
