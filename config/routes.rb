@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post   :login,  to: 'sessions#create'
   delete :logout, to: 'sessions#delete'
 
-  resources :tests do
+  resources :tests, only: :index do
     resources :questions, shallow: true, except: :index do
       resources :answers, shallow: true, except: :index
     end
@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     member do
       get :result
     end
+  end
+
+  namespace :admin do
+    resources :tests
   end
 
 end
