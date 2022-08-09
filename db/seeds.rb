@@ -23,22 +23,27 @@ css_question = Question.create(title: 'CSS its Fronted language?')
 js_question = Question.create(title: 'JS its Mobile language?')
 swift_question = Question.create(title: 'Swift its Mobile language?')
 
-answers = Answer.create([
-                {body: 'Yes', correct: true},
-                {body: 'No', correct: false},
-
-                {body: 'Yes', correct: true},
-                {body: 'No', correct: false},
-
-                {body: 'Yes', correct: true},
-                {body: 'No', correct: false},
-
-                {body: 'Yes', correct: true},
-                {body: 'No', correct: false},
-
-                {body: 'Yes', correct: true},
-                {body: 'No', correct: false},
-
-                {body: 'Yes', correct: true},
-                {body: 'No', correct: false}
+ruby_question.answers.create([
+                {title: 'Yes', question_id: questions[0].id, correct: true},
+                {title: 'No', question_id: questions[0].id, correct: false}
+              ])
+go_question.answers.create([
+                {title: 'Yes', question_id: questions[0].id, correct: true},
+                {title: 'No', question_id: questions[0].id, correct: false}
+              ])
+html_question.answers.create([
+                {title: 'Yes', question_id: questions[0].id, correct: true},
+                {title: 'No', question_id: questions[0].id, correct: false}
+              ])
+css_question.answers.create([
+                {title: 'Yes', question_id: questions[0].id, correct: true},
+                {title: 'No', question_id: questions[0].id, correct: false}
+              ])
+js_question.answers.create([
+                {title: 'Yes', question_id: questions[0].id, correct: true},
+                {title: 'No', question_id: questions[0].id, correct: false}
+              ])
+swift_question.answers.create([
+                {title: 'Yes', question_id: questions[0].id, correct: true},
+                {title: 'No', question_id: questions[0].id, correct: false}
               ])

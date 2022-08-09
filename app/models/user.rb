@@ -19,6 +19,10 @@ class User < ApplicationRecord
                     uniqueness: true,
                     format: { with: VALID_EMAIL_REGEX }
 
+  def admin?
+    is_a?(Admin)
+  end
+
   def tests_passage(test)
     tests_passages.order(id: :desc).find_by(test_id: test.id)
   end

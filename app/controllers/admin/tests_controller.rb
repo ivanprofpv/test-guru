@@ -17,9 +17,11 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def create
-    @test = Test.create(test_params)
+    @test = current_user.created_tests.create(test_params)
+
     if @test.save
-      redirect_to @test
+      flash[:good] = "Test created!"
+      redirect_to admin_test_path(@test)
     else
       render :new
     end
@@ -27,7 +29,8 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to @test
+      flash[:good] = "Test updated!"
+      redirect_to admin_test_path(@test)
     else
       render :edit
     end
@@ -36,12 +39,8 @@ class Admin::TestsController < Admin::BaseController
   def destroy
 
     @test.destroy
-    redirect_to tests_path
-  end
-
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
+    flash[:good] = "Test deleted!"
+    redirect_to admin_tests_path
   end
 
   private
