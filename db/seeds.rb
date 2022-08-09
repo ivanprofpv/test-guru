@@ -11,7 +11,7 @@ Admin.create(
   User.create(
     email: "email-#{i}@mail.com",
     password: '1234',
-    password_confirmation: '1234'
+    password_confirmation: '1234',
     first_name: "First_name_#{i}",
     last_name: "Last_name_#{i}",
     confirmed_at: Time.zone.now
