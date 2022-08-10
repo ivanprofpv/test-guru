@@ -23,12 +23,12 @@ backend = Category.create(title: 'Backend')
 fronted = Category.create(title: 'Fronted')
 mobile = Category.create(title: 'mobile')
 
-ruby_test = backend.tests.create!(title: 'Ruby', level: 3, author_id: 1)
-go_test = backend.tests.create(title: 'Go', level: 2, author_id: 1)
-html_test = fronted.tests.create(title: 'HTML', level: 1, author_id: 1)
-css_test = fronted.tests.create(title: 'CSS', level: 1, author_id: 1)
-js_test = mobile.tests.create(title: 'JS', level: 2, author_id: 1)
-swift_test = mobile.tests.create(title: 'Swift', level: 3, author_id: 1)
+ruby_test = backend.tests.create!(title: 'Ruby', level: 3, author_id: User.find_by(email: 'admin@testguru.com').id)
+go_test = backend.tests.create(title: 'Go', level: 2, author_id: User.find_by(email: 'admin@testguru.com').id)
+html_test = fronted.tests.create(title: 'HTML', level: 1, author_id: User.find_by(email: 'admin@testguru.com').id)
+css_test = fronted.tests.create(title: 'CSS', level: 1, author_id: User.find_by(email: 'admin@testguru.com').id)
+js_test = mobile.tests.create(title: 'JS', level: 2, author_id: User.find_by(email: 'admin@testguru.com').id)
+swift_test = mobile.tests.create(title: 'Swift', level: 3, author_id: User.find_by(email: 'admin@testguru.com').id)
 
 ruby_question = ruby_test.questions.create(title: 'Ruby its Backend language?')
 go_question = go_test.questions.create(title: 'Go its Backend language?')
@@ -38,8 +38,8 @@ js_question = js_test.questions.create(title: 'JS its Mobile language?')
 swift_question = swift_test.questions.create(title: 'Swift its Mobile language?')
 
 ruby_question.answers.create([
-                {body: 'Yes', question_id: 1, correct: true},
-                {body: 'No', question_id: 1, correct: false}
+                {body: 'Yes', correct: true},
+                {body: 'No', correct: false}
               ])
 go_question.answers.create([
                 {body: 'Yes', question_id: 2, correct: true},
