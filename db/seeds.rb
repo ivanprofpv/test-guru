@@ -31,22 +31,22 @@ ruby_question.answers.create([
                 {body: 'No', correct: false}
               ])
 go_question.answers.create([
-                {body: 'Yes', question_id: 2, correct: true},
-                {body: 'No', question_id: 2, correct: false}
+                {body: 'Yes', correct: true},
+                {body: 'No', correct: false}
               ])
 html_question.answers.create([
-                {body: 'Yes', question_id: 3, correct: true},
-                {body: 'No', question_id: 3, correct: false}
+                {body: 'Yes', correct: true},
+                {body: 'No', correct: false}
               ])
 css_question.answers.create([
-                {body: 'Yes', question_id: 4, correct: true},
-                {body: 'No', question_id: 4, correct: false}
+                {body: 'Yes', correct: true},
+                {body: 'No', correct: false}
               ])
 js_question.answers.create([
-                {body: 'Yes', question_id: 5, correct: true},
-                {body: 'No', question_id: 5, correct: false}
+                {body: 'Yes', correct: true},
+                {body: 'No', correct: false}
               ])
 swift_question.answers.create([
-                {body: 'Yes', question_id: 6, correct: true},
-                {body: 'No', question_id: 6, correct: false}
+                {body: 'Yes', correct: true},
+                {body: 'No', correct: false}
               ])
