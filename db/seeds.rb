@@ -1,34 +1,23 @@
-Admin.create!(
-  email: 'admin@testguru.com',
-  password: '1234567',
-  password_confirmation: '1234567',
-  type: "Admin",
-  first_name: "FirstName",
-  last_name: "LastName",
-  confirmed_at: Time.zone.now
-)
-
-3.times do |i|
-  User.create!(
-    email: "email-#{i}@mail.com",
-    password: '1234567',
-    password_confirmation: '1234567',
-    first_name: "First_name_#{i}",
-    last_name: "Last_name_#{i}",
-    confirmed_at: Time.zone.now
-  )
-end
+admin = Admin.create!(
+        email: 'admin@testguru.com',
+        password: '1234567',
+        password_confirmation: '1234567',
+        type: "Admin",
+        first_name: "FirstName",
+        last_name: "LastName",
+        confirmed_at: Time.zone.now
+       )
 
 backend = Category.create(title: 'Backend')
 fronted = Category.create(title: 'Fronted')
 mobile = Category.create(title: 'mobile')
 
-ruby_test = backend.tests.create!(title: 'Ruby', level: 3, author_id: User.find_by(email: 'admin@testguru.com').id)
-go_test = backend.tests.create(title: 'Go', level: 2, author_id: User.find_by(email: 'admin@testguru.com').id)
-html_test = fronted.tests.create(title: 'HTML', level: 1, author_id: User.find_by(email: 'admin@testguru.com').id)
-css_test = fronted.tests.create(title: 'CSS', level: 1, author_id: User.find_by(email: 'admin@testguru.com').id)
-js_test = mobile.tests.create(title: 'JS', level: 2, author_id: User.find_by(email: 'admin@testguru.com').id)
-swift_test = mobile.tests.create(title: 'Swift', level: 3, author_id: User.find_by(email: 'admin@testguru.com').id)
+ruby_test = backend.tests.create!(title: 'Ruby', level: 3, author_id: admin.id)
+go_test = backend.tests.create(title: 'Go', level: 2, author_id: admin.id)
+html_test = fronted.tests.create(title: 'HTML', level: 1, author_id: admin.id)
+css_test = fronted.tests.create(title: 'CSS', level: 1, author_id: admin.id)
+js_test = mobile.tests.create(title: 'JS', level: 2, author_id: admin.id)
+swift_test = mobile.tests.create(title: 'Swift', level: 3, author_id: admin.id)
 
 ruby_question = ruby_test.questions.create(title: 'Ruby its Backend language?')
 go_question = go_test.questions.create(title: 'Go its Backend language?')
