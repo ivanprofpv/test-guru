@@ -1,7 +1,7 @@
 <h1><%= t('.header', title: @test_passage.test.title %></h1>
 
-<p class "<%= @test_passage.success_rate? ? 'succes' : 'failed' %>">Test passed on <%= @test_passage.percentage_correct_answers%> %</p>
+<p class "<%= @test_passage.success_rate? ? 'succes' : 'failed' %>"><%= t('.text_passed') %> <%= @test_passage.percentage_correct_answers%> %</p>
 
-<p><%= @test_passage.success_rate? ? 'Test passed!' : 'Test failed!' %></p>
+<p><%= @test_passage.success_rate? ? t('.success') : t('.fail') %></p>
 
-<p><%= link_to 'Back to tests', tests_path %></p>
+<p><%= link_to t('.back_to_tests'), tests_path %></p>

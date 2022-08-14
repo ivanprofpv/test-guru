@@ -1,11 +1,15 @@
 en:
-  hello: "Hello world"
+  show: "Show"
+  edit: "Edit"
+  delete: "Delete"
+  back: "Back"
+  sure: "Are you sure?"
 
   helpers:
     submit:
-      test:
-        create: "Create test"
-        update: "Update test"
+      tests:
+        create: "Create Test"
+        update: "Update Test"
     label:
       test:
         title: "Title"
@@ -20,19 +24,73 @@ en:
 
   tests:
     index:
-      header: "Tricky tests"
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Actions"
+    test:
+      start: "Start"
 
   test_passages:
     result:
-      header: "The %{title} test was completed!"
+      header: "The %{title} Test was completed!"
+      text: "You corectly answered"
+      all_tests: "To all tests"
+      success: "Congratulation, you succesfuly pass the test!"
+      fail: 'You failed to pass test!'
+    show:
+      header: "Passing the %{title} Test"
+      question: "Question"
+      next: "Next"
 
   admin:
+    answers:
+      create:
+        success: "Answer was successfully created"
+      update:
+        success: "Answer was successfully updated"
+      destroy:
+        success: "Answer was successfully deleted"
+    base:
+      admin_required!:
+        message: "You are not autorized to view this page"
+    questions:
+      create:
+        success: "Question was successfully created"
+      update:
+        success: "Question was successfully updated"
+      destroy:
+        success: "Question was successfully deleted"
     tests:
       create:
-        success: "Test was successfully created!"
+        success: "Test was successfully created"
+      update:
+        success: "Test was successfully updated"
+      destroy:
+        success: "Test was successfully deleted"
       index:
-        header: "Tricky tests"
+        header: "Tricky Tests"
+        new: "New Test"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+      show:
+        title: "Title"
+        new_question: "New question"
+        level: "Level"
+        category: "Category"
+        creator: "Creator"
+        questions: "Questions %{title}"
+        actions: "Actions"
+        body: "Body"
+      new:
+        header: "Create new Test"
+      edit:
+        header: "Edit %{title} Test"
+
 
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"
+      subject: 'You just complited the TestGuru test!'

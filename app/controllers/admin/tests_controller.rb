@@ -29,7 +29,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      flash[:good] = "Test updated!"
+      flash[:good] = t('.success')
       redirect_to admin_test_path(@test)
     else
       render :edit
@@ -39,7 +39,7 @@ class Admin::TestsController < Admin::BaseController
   def destroy
 
     @test.destroy
-    flash[:good] = "Test deleted!"
+    flash[:good] = t('.success')
     redirect_to admin_tests_path
   end
 
