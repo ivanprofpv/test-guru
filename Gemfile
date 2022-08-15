@@ -58,8 +58,13 @@ gem 'devise', '~> 4.0'
 
 gem 'sass-rails'
 
-#LOCALIZATION
+# LOCALIZATION
 gem 'rails-i18n', '~> 6.0.0'
+
+# UI
+
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.0.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
