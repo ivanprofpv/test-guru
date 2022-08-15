@@ -22,7 +22,13 @@ ru:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"  
+        other: "Обнаружено %{count} ошибки"
+    nav:
+      logout: "Выйти"
+      log_in: "Войти"
+      sign_up: "Регистрация"
+      admin_panel: "Панель администратора"
+      welcome: "Здравствуйте,"
 
   tests:
     index:
@@ -91,6 +97,13 @@ ru:
         header: "Создать новый Тест"
       edit:
         header: "Изменить %{title} Тест"
+
+  devise:
+    sessions:
+      new:
+        enter_email: "Введите e-mail"
+        button_enter: "Отправить"
+        remember_me: "Запомнить меня"
 
   tests_mailer:
     completed_test:

@@ -21,6 +21,12 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      logout: "Log out"
+      log_in: "Log in"
+      sign_up: "Sign up"
+      admin_panel: "Admin panel"
+      welcome: "Welcome,"
 
   tests:
     index:
@@ -90,6 +96,12 @@ en:
       edit:
         header: "Edit %{title} Test"
 
+  devise:
+    sessions:
+      new:
+        enter_email: "Enter e-mail"
+        button_enter: "Enter"
+        remember_me: "Remember me"
 
   tests_mailer:
     completed_test:
