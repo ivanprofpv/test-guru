@@ -16,7 +16,7 @@ class AnswersController < ApplicationController
     @answer = @question.answers.new(answer_params)
       if @answer.save
         flash[:good] = t('.success')
-        redirect_to admin_answer_path(@answer)
+        redirect_to admin_answer_url(@answer)
       else
         render :new
       end
@@ -25,7 +25,7 @@ class AnswersController < ApplicationController
   def update
     if @answer.update(answer_params)
       flash[:good] = t('.success')
-      redirect_to admin_answer_path(@answer)
+      redirect_to admin_answer_url(@answer)
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class AnswersController < ApplicationController
   def destroy
     @answer.destroy
     flash[:good] = t('.success')
-    redirect_to admin_question_path(@answer.question)
+    redirect_to admin_question_url(@answer.question)
   end
 
   private
