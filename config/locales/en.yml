@@ -43,6 +43,10 @@ en:
       header: "Passing the %{title} Test"
       question: "Question"
       next: "Next"
+      gist_question: "Gist question"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist!"
 
   admin:
     answers:
@@ -89,7 +93,8 @@ en:
         header: "Create new Test"
       edit:
         header: "Edit %{title} Test"
-
+    gist:
+      header: "All Gist"
 
   tests_mailer:
     completed_test:

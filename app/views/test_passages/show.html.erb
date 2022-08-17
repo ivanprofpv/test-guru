@@ -4,9 +4,9 @@
 
 <br>
 
-<b>
-  <%= @test_passage.current_question.body %>
-</b>
+<p>
+  <b><%= @test_passage.current_question.body %></b>
+</p>
 
 <br>
 
@@ -19,5 +19,6 @@
    </p>
   <% end %>
 
+  <p><%= link_to t('gist_question'), gist_passage_path(@test_passage), method: :post %></p>
   <p><%= form.submit t('next') %></p>
 <% end %>
