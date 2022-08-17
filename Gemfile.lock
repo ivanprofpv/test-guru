@@ -95,6 +95,10 @@ GEM
       responders
       warden (~> 1.2.3)
     digest (3.1.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.11.0)
     execjs (2.8.1)
     faraday (2.5.2)
@@ -276,12 +280,13 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.0)
+  dotenv-rails
   importmap-rails
   jbuilder
   jquery-rails
   letter_opener
   net-smtp
-  octokit (~> 4.0)
+  octokit (~> 4.25.1)
   psych (< 4)
   puma (~> 5.0)
   rails (~> 6.1.5)

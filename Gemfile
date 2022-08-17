@@ -69,7 +69,9 @@ gem 'bootstrap', '~> 4.0.0'
 
 # NETWORKING
 
-gem 'octokit', '~> 4.25.1'
+gem 'octokit', '~> 4.25'
+
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
