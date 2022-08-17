@@ -59,12 +59,19 @@ gem 'devise', '~> 4.0'
 gem 'sass-rails'
 
 # LOCALIZATION
+
 gem 'rails-i18n', '~> 6.0.0'
 
 # UI
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
+
+# NETWORKING
+
+gem 'octokit', '~> 4.25'
+
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

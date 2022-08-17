@@ -51,6 +51,10 @@ ru:
       header: "Прохождение %{title} теста"
       question: "Вопрос"
       next: "Далее"
+      gist_question: "Отправить в Gist"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения Gist произошла ошибка!"
 
   admin:
     answers:
@@ -97,6 +101,11 @@ ru:
         header: "Создать новый Тест"
       edit:
         header: "Изменить %{title} Тест"
+    gist:
+      header: "Все Gist"
+
+  gist_question_service:
+    description:  "Вопрос %{test_title} c TestGuru"
 
   devise:
     sessions:
