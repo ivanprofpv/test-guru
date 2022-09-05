@@ -108,6 +108,10 @@ en:
         enter_email: "Enter e-mail"
         button_enter: "Enter"
         remember_me: "Remember me"
+    registrations:
+      new:
+        become_a_guru: "Become a Guru"
+        sign_up: "Sign up"
 
   tests_mailer:
     completed_test:

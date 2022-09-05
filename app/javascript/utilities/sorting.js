@@ -1,7 +1,7 @@
 document.addEventListener('turbolinks:load', function() {
   var control = document.querySelector('.sort-by-title')
 
-  if (control) {control.addEventListener('click', sortRowsByTitile)
+  if (control) {control.addEventListener('click', sortRowsByTitle)
 })
 
 function sortRowsByTitle() {
@@ -9,18 +9,18 @@ function sortRowsByTitle() {
 
   var rows = table.querySelectorAll('tr')
   var sortedRows = []
-  
+
   // выбираем все строки и помещаем в массив sortedRows
   for (var i = 1; i < rows.length; i++) {
     sortedRows.push(rows[i])
   }
-  
+
   // здесь нажимаем на иконку и сортируем
   if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
     sortedRows.sort(compareRowsAsc)
     this.querySelector('.octicon-arrow-up').classList.remove('hide')
     this.querySelector('.octicon-arrow-down').classList.add('hide')
-  } else { 
+  } else {
     sortedRows.sort(compareRowsDesc)
     this.querySelector('.octicon-arrow-down').classList.remove('hide')
     this.querySelector('.octicon-arrow-up').classList.add('hide')

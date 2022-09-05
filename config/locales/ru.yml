@@ -113,6 +113,9 @@ ru:
         enter_email: "Введите e-mail"
         button_enter: "Отправить"
         remember_me: "Запомнить меня"
+    registrations:
+      new:
+        sign_up: "Зарегистрироваться"
 
   tests_mailer:
     completed_test:
