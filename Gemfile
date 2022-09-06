@@ -74,6 +74,9 @@ gem 'octokit', '~> 4.25'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+# to run on win10, not needed for ubuntu
+gem 'autoprefixer-rails', '8.6.5'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
