@@ -5,13 +5,13 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'admin/nav' %>
+    <%= render 'shared/nav' %>
     <%= render 'shared/flash' %>
-      
+
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>

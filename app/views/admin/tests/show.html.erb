@@ -3,11 +3,11 @@
   <% @test.title %>
 </p>
 <p>
-<%= link_to t('.new_question'), new_test_question_path(@test) %>
+<%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 </p>
 <p>
   <strong><%= t('.level') %>:</strong>
-  <% @test.level(@test) %>
+  <% @test.level %>
 </p>
 
 <p>
@@ -32,4 +32,4 @@
 </table>
 
 <%= link_to t('edit'), edit_admin_test_path(@test) %> |
-<%= link_to t('back'), admin_tests_path %>
+<%= link_to t('back'), admin_tests_url %>

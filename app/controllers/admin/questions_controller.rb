@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
 
   before_action :find_test, only: %i[index new create]
   before_action :find_question, only: %i[show destroy edit update]
@@ -40,7 +40,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:title)
   end
 
   def find_test
