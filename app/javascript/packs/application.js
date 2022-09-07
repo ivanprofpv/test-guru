@@ -14,7 +14,7 @@ import "channels"
 import '@popperjs/core'
 import "bootstrap/js/dist/dropdown"
 
-import '../utilities/sorting'
+require("utilities/sorting")
 import '../utilities/password'
 
 Rails.start()
