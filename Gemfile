@@ -21,13 +21,18 @@ gem "importmap-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
+gem 'turbolinks', '~> 5'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
 
-gem 'webpacker', '~>3.0'
+gem 'jbuilder', '~> 2.7'
+
+gem 'webpacker', '~> 4.3.0'
+
+gem 'faraday-retry'
 
 gem 'psych', '< 4'
 
@@ -65,7 +70,7 @@ gem 'rails-i18n', '~> 6.0.0'
 # UI
 
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 5.1.3'
 gem 'octicons_helper'
 
 # NETWORKING
@@ -75,7 +80,7 @@ gem 'octokit', '~> 4.25'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # to run on win10, not needed for ubuntu
-gem 'autoprefixer-rails', '8.6.5'
+gem 'autoprefixer-rails', '9.1.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
