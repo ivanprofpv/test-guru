@@ -1,13 +1,13 @@
 document.addEventListener('turbolinks:load', function() {
   var control = document.querySelector('.sort-by-title')
 
-  if (control) {control.addEventListener('click', sortRowsByTitle)
+  if (control) control.addEventListener('click', sortRowsByTitle)
 })
 
 function sortRowsByTitle() {
-  var table = document.querySelector('table')
+  var tbody = document.querySelector('tbody')
 
-  var rows = table.querySelectorAll('tr')
+  var rows = tbody.querySelectorAll('tr')
   var sortedRows = []
 
   // выбираем все строки и помещаем в массив sortedRows
@@ -26,20 +26,20 @@ function sortRowsByTitle() {
     this.querySelector('.octicon-arrow-up').classList.add('hide')
   }
 
-  var sortedTable = document.createElement('table')
+  var sortedTable = document.createElement('tbody')
 
-  sortedTable.classList.add('table')
+  sortedTable.classList.add('tbody')
   sortedTable.appendChild(rows[0])
 
   for (var i = 0; i < sortedRows.length; i++) {
     sortedTable.appendChild(sortedRows[i])
   }
 
-  table.parentNode.replaceChild(sortedTable, table)
+  tbody.parentNode.replaceChild(sortedTable, tbody)
 }
 
 //здесь логика сортировки
-function compareRowsAsc(row1, row) {
+function compareRowsAsc(row1, row2) {
   var testTitle1 = row1.querySelector('td').textContent
   var testTitle2 = row2.querySelector('td').textContent
 
@@ -48,7 +48,7 @@ function compareRowsAsc(row1, row) {
   return 0
 }
 
-function compareRowsDesc(row1, row) {
+function compareRowsDesc(row1, row2) {
   var testTitle1 = row1.querySelector('td').textContent
   var testTitle2 = row2.querySelector('td').textContent
 
