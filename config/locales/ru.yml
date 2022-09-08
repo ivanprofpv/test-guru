@@ -88,6 +88,8 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+      form_inline:
+        submit: "ОК"
       show:
         title: "Название"
         new_question: "Новый вопрос"

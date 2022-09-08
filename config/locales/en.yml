@@ -86,6 +86,8 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+      form_inline:
+        submit: "ОК"
       show:
         title: "Title"
         new_question: "New question"

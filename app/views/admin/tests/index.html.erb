@@ -1,8 +1,10 @@
 <h1><%= t('.header') %></h1>
 
 <p>
-  <%= link_to t('.new'), new_admin_test_path %>
+  <%= link_to t('.new'), new_admin_test_path, class: 'btn btn-success' %>
 </p>
+
+<%= render 'shared/errors', resource: @test %>
 
 <table class="table">
   <tr>
@@ -18,9 +20,3 @@
 
     <%= render @tests %>
 </table>
-
-<ul>
-  <% @tests.each do |test| %>
-    <li><%= test.title %> (<%= "#{test.questions.size}" %>)</li>
-  <% end %>
-</ul>
