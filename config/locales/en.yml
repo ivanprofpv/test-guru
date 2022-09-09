@@ -28,14 +28,13 @@ en:
       admin_panel: "Admin panel"
       welcome: "Welcome,"
 
-  tests:
+  tests:    
     index:
       header: "Tricky Tests"
       title: "Title"
       level: "Level"
       questions: "Questions"
       actions: "Actions"
-    test:
       start: "Start"
 
   test_passages:

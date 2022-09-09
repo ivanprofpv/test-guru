@@ -15,6 +15,7 @@ import '@popperjs/core'
 import 'bootstrap/js/dist/dropdown'
 import './sorting'
 import './password'
+import './form_inline'
 
 Rails.start()
 Turbolinks.start()
