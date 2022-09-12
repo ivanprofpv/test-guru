@@ -38,6 +38,8 @@ ru:
       questions: "Вопросы"
       actions: "Действия"
       start: "Начать"
+    test:
+      start: "Начать" 
 
   test_passages:
     result:

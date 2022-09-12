@@ -3,7 +3,7 @@ document.addEventListener('turbolinks:load', function() {
 
   if (controls.length) {
     for (var i = 0; i < controls.length; i++) {
-      controls[i].addEventListener('click',formInlineLinkHandler)
+      controls[i].addEventListener('click', formInlineLinkHandler)
     }
   }
 

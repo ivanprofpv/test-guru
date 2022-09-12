@@ -36,6 +36,8 @@ en:
       questions: "Questions"
       actions: "Actions"
       start: "Start"
+    test:
+      start: "Start"     
 
   test_passages:
     result:

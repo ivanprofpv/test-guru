@@ -25,7 +25,7 @@ class TestPassage < ApplicationRecord
     correct_question.to_f / test.questions.count * 100
   end
 
-  def question_nubmer
+  def question_number
     self.test.questions.where('id <= ?', current_question.id).count
   end
 

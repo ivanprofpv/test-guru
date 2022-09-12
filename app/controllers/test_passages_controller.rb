@@ -39,7 +39,7 @@ class TestPassagesController < ApplicationController
   private
 
   def set_test_passage
-    @test_passage = TestPassage.find_by(params[:id])
+    @test_passage = TestPassage.find(params[:id])
   end
 
 end
