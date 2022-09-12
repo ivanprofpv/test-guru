@@ -13,11 +13,11 @@
   <b><%= t('.question') %><%= @test_passage.question_number %> /
   <b><%= question_count %></b>
 <br>
-  <%= current_question.body %>
+  <%= current_question.title %>
 </div>
 
 <p>
-  <b><%= current_question.body %></b>
+  <b><%= current_question.title %></b>
 </p>
 
 <br>
@@ -25,7 +25,7 @@
 <%= form_with url: test_passage_path(@test_passage), local: true,
                                                      method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids,
-       current_question.answers, :id, :body,
+       @test_passage.current_question.answers, :id, :body,
                                                include_hidden: false do |b| %>
     <div class="form-group">
         <%= b.check_box id: "answer_ids_#{b.object.id}" %>
@@ -33,7 +33,7 @@
     </div>
   <% end %>
 
-  <p><%= link_to t('gist_question'), gist_passage_path(@test_passage), method: :post %></p>
-  <p><%= form.submit t('next'), class: 'btn btn-primary' %></p>
+  <p><%= link_to t('gist_question'), gist_test_passage_path(@test_passage), method: :post %></p>
+  <p><%= form.submit t('.next'), class: 'btn btn-primary' %></p>
 
 <% end %>
