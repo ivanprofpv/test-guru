@@ -24,7 +24,7 @@ class User < ApplicationRecord
     is_a?(Admin)
   end
 
-  def tests_passage(test)
+  def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
 
