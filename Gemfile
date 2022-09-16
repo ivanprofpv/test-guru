@@ -30,7 +30,7 @@ gem "stimulus-rails"
 
 gem 'jbuilder', '~> 2.7'
 
-gem 'webpacker', '~> 4.3.0'
+gem 'webpacker', '5.4.3'
 
 gem 'faraday-retry'
 
