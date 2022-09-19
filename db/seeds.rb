@@ -1,7 +1,7 @@
 admin = Admin.create!(
         email: 'admin@testguru.com',
-        password: '1234567',
-        password_confirmation: '1234567',
+        password: ENV.fetch('ADMIN_PASSWORD'),
+        password_confirmation: ENV.fetch('ADMIN_PASSWORD_CONF'),
         type: "Admin",
         first_name: "FirstName",
         last_name: "LastName",

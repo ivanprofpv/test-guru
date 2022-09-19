@@ -16,6 +16,14 @@ en:
         level: "Level"
         category_id: "Category"
 
+  feedbacks:
+    new:
+      title: "Feedback"
+      label: " Write your message"
+      submit: "Submit"
+    create:
+      success: "Message sent!"
+
   shared:
     errors:
       header:
@@ -27,6 +35,10 @@ en:
       sign_up: "Sign up"
       admin_panel: "Admin panel"
       welcome: "Welcome,"
+    footer:
+      app_name: "Application by test"
+      app_name_school: "Educational project in an online school"
+      feedback: "Feedback"
 
   tests:    
     index:
@@ -37,7 +49,7 @@ en:
       actions: "Actions"
       start: "Start"
     test:
-      start: "Start"     
+      start: "Start"
 
   test_passages:
     result:

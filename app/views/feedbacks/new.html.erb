@@ -1,0 +1,14 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h2><%= t('.title') %></h2>
+      <div class="card border-primary">
+        <div class="card-body">
+          <%= form_with url: feedbacks_path, method: :post do |form| %>
+          <%= form.text_area :feedback, autofocus: true, :rows=>5, :cols=>50, :maxlength=>"254", placeholder: t('.label') %>
+          <br>
+          <%= form.submit t('.submit'), class: 'btn btn-primary mt-3' %>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>

@@ -16,6 +16,14 @@ ru:
         level: "Уровень"
         category_id: "Категория"
 
+  feedbacks:
+    new:
+      title: "Обратная связь"
+      label: " Введите ваше сообщение"
+      submit: "Отправить"
+    create:
+      success: "Сообщение отправлено!"
+
   shared:
     errors:
       header:
@@ -29,6 +37,10 @@ ru:
       sign_up: "Регистрация"
       admin_panel: "Панель администратора"
       welcome: "Здравствуйте,"
+    footer:
+      app_name: "Приложение по тестам"
+      app_name_school: "Учебный проект в онлайн-школе"
+      feedback: "Обратная связь"
 
   tests:
     index:
