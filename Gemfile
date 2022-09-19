@@ -36,8 +36,6 @@ gem 'faraday-retry'
 
 gem 'psych', '< 4'
 
-gem 'net-smtp'
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -81,6 +79,10 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # to run on win10, not needed for ubuntu
 gem 'autoprefixer-rails', '9.1.0'
+
+gem 'net-smtp', require: false
+gem 'net-pop', require: false
+gem 'net-imap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
