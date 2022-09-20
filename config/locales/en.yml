@@ -58,14 +58,18 @@ en:
       all_tests: "To all tests"
       success: "Congratulation, you succesfuly pass the test!"
       fail: 'You failed to pass test!'
+      text_passed: "Test passed on "
     show:
       header: "Passing the %{title} Test"
       question: "Question"
       next: "Next"
       gist_question: "Gist question"
+      no_question: "This test has no questions yet. Try to come back later."
     gist:
       success: "Gist was successfully created!"
       failure: "An error occurred while saving gist!"
+    update:
+      no_answer: "This question has no answers yet. Try to come back later."
 
   admin:
     answers:

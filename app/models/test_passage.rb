@@ -22,7 +22,7 @@ class TestPassage < ApplicationRecord
   end
 
   def percentage_correct_answers
-    correct_question.to_f / test.questions.count * 100
+    correct_questions.to_f / test.questions.count * 100
   end
 
   def question_number
