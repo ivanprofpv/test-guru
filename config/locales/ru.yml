@@ -105,6 +105,10 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+        status: "Статус"
+      test:
+        activated: "Активирован"
+        not_activated: "Не активирован"
       form_inline:
         submit: "ОК"
       show:

@@ -11,6 +11,7 @@ class Test < ApplicationRecord
   scope :level_hard, -> { where(level: 5..Float::INFINITY) }
   scope :search_tests_category, ->(category) {
     joins(:category).where(categories: { title: category }) }
+  scope :activated, -> { where(activated: true) }
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
