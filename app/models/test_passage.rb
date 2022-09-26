@@ -4,6 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question, only: %i[create update]
+  before_update :before_update_set_success
 
   SUCCESS_RATE = 85
 
@@ -45,5 +46,9 @@ class TestPassage < ApplicationRecord
                             else
                               test.questions.order(:id).where('id > ?', current_question.id).first
                             end
+  end
+
+  def before_update_set_success
+    self.success = true if self.succeeded?
   end
 end
