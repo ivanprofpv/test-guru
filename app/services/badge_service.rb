@@ -27,7 +27,7 @@ class BadgeService
   end
 
   def first_rule_completed?(edge)
-    @current_test.test_passage.where(user: @current_user, success: true).count == 1
+    @current_test.test_passage.where(user: @current_user, passed: true).count == 1
   end
 
   def level_rule_completed(badge)
@@ -43,7 +43,7 @@ class BadgeService
   end
 
   def tests_passed_success
-    @current_user.tests.where("test_passages.success = true")
+    @current_user.tests.where("test_passages.passed = true")
   end
 
 end
