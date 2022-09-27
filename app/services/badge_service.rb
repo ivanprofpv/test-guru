@@ -16,7 +16,7 @@ class BadgeService
     end
 
     if @count_user_badges != @current_user.badges.count
-      flash[:notice] = t('.new_achievements')
+      flash[:good] = t('.new_achievements')
     end
   end
 
@@ -27,19 +27,19 @@ class BadgeService
   end
 
   def first_rule_completed?(edge)
-    @current_test.test_passage.where(user: @current_user, passed: true).count == 1
+    @current_test.test_passages.where(user: @current_user, passed: true).count == 1
   end
 
   def level_rule_completed(badge)
-    all_tests_by_level = Test.tests_in_level(badge.rule_value).count
-    success_tests_by_level = tests_passed_success.tests_in_level(badge.rule_value).uniq.count
-    all_tests_by_level == success_tests_by_level
+    all_tests_by_level = Test.tests_per_level(badge.rule_value).count
+    passed_tests_by_level = tests_passed_success.tests_per_level(badge.rule_value).uniq.count
+    all_tests_by_level == passed_tests_by_level
   end
 
   def category_rule_completed?(badge)
-    all_tests_by_category = Test.tests_in_category(badge.rule_value).count
-    success_tests_by_category = tests_passed_success.tests_in_category(badge.rule_value).uniq.count
-    all_tests_by_category == success_tests_by_category
+    all_tests_by_category = Test.search_tests_category(badge.rule_value).count
+    passed_tests_by_category = tests_passed_success.search_tests_category(badge.rule_value).uniq.count
+    all_tests_by_category == passed_tests_by_category
   end
 
   def tests_passed_success

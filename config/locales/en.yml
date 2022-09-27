@@ -4,6 +4,8 @@ en:
   delete: "Delete"
   back: "Back"
   sure: "Are you sure?"
+  new_badge: "Create new badge"
+  edit_badge: "Edit badge"
 
   helpers:
     submit:
@@ -126,6 +128,13 @@ en:
         header: "Edit %{title} Test"
     gist:
       header: "All Gist"
+    badges:
+      create:
+        success: "Badge was created"
+      update:
+        success: "Badge was updated"
+      destroy:
+        success: "Badge was deleted"
 
   devise:
     sessions:
@@ -141,3 +150,14 @@ en:
   tests_mailer:
     completed_test:
       subject: 'You just complited the TestGuru test!'
+
+  badges:
+    index:
+      header: "Badges"
+      tests: "Tests"
+      create_badge: "Create badge"
+      user_badges: "My badges"
+      no_badges: "You haven't received your badge yet"
+    show:
+      tests: "Tests"
+      badges: "Badges"

@@ -4,6 +4,8 @@ ru:
   delete: "Удалить"
   back: "Назад"
   sure: "Вы уверены?"
+  new_badge: "Создать новый значок"
+  edit_badge: "Изменить значок"
 
   helpers:
     submit:
@@ -126,6 +128,13 @@ ru:
         header: "Изменить %{title} Тест"
     gist:
       header: "Все Gist"
+    badges:
+      create:
+        success: "Значок создан"
+      update:
+        success: "Значок обновлен"
+      destroy:
+        success: "Значок удален"
 
   gist_question_service:
     description:  "Вопрос %{test_title} c TestGuru"
@@ -143,3 +152,13 @@ ru:
   tests_mailer:
     completed_test:
       subject: 'Вы успешно завершили тест на TestGuru!'
+  badges:
+    index:
+      header: "Все значки"
+      tests: "Тесты"
+      create_badge: "Создать значок"
+      user_badges: "Мои значки"
+      no_badges: "Вы еще не получили ни одного значка"
+    show:
+      tests: "Тесты"
+      badges: "Значки"

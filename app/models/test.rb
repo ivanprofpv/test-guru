@@ -12,6 +12,7 @@ class Test < ApplicationRecord
   scope :search_tests_category, ->(category) {
     joins(:category).where(categories: { title: category }) }
   scope :activated, -> { where(activated: true) }
+  scope :tests_per_level, -> (level) { where(level: level) }
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
