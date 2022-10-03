@@ -17,7 +17,7 @@ class TestPassagesController < ApplicationController
     end
       @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || how_much_time_left?
       TestsMailer.completed_test(@test_passage).deliver_now
       BadgeService.new(@test_passage).call
       redirect_to result_test_passage_path(@test_passage)
@@ -56,6 +56,10 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def how_much_time_left?
+    Time.now - (@test_passage.created_at + @test_passage.test.timer * 60) >= 0
   end
 
 end
