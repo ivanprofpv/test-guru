@@ -4,6 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question, only: %i[create update]
+  before_update :before_update_set_success
 
   SUCCESS_RATE = 85
 
@@ -29,6 +30,10 @@ class TestPassage < ApplicationRecord
     self.test.questions.where('id <= ?', current_question.id).count
   end
 
+  def create_timer
+    (self.created_at + self.test.timer * 60) - Time.now
+  end
+
   private
 
   def correct_answer?(answer_ids)
@@ -45,5 +50,9 @@ class TestPassage < ApplicationRecord
                             else
                               test.questions.order(:id).where('id > ?', current_question.id).first
                             end
+  end
+
+  def before_update_set_success
+    self.passed = true if self.success_rate?
   end
 end
