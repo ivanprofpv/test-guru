@@ -29,10 +29,10 @@ class TestPassagesController < ApplicationController
   def result
     if @test_passage.success_rate?
       flash[:good] = t('.success')
-    else 
+    else
       flash[:danger] = t('.fail')
     end
-    
+
     render :result
   end
 
@@ -56,10 +56,6 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
-  end
-
-  def how_much_time_left?
-    Time.now - (@test_passage.created_at + @test_passage.test.timer * 60) >= 0
   end
 
 end

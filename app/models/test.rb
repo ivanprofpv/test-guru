@@ -19,10 +19,4 @@ class Test < ApplicationRecord
   validates :level, numericality: { only_integer: true, greater_than: 0 }
   validates :timer, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
-  def self.search_tests_category(category)
-    search_tests_category(category)
-    .order(title: :desc)
-    .pluck(:title)
-  end
-
 end
