@@ -60,14 +60,18 @@ ru:
       back_to_tests: "Вернуться к тестам"
       success: "Вы успешно прошли тест!"
       fail: "Вы не прошли тест!"
+      text_passed: "Тест пройден на "
     show:
       header: "Прохождение %{title} теста"
       question: "Вопрос"
       next: "Далее"
       gist_question: "Отправить в Gist"
+      no_question: "У этого теста еще нет вопросов. Попробуйте зайти позже."
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во время сохранения Gist произошла ошибка!"
+    update:
+      no_answer: "У этого вопроса еще нет ответов. Попробуйте зайти позже."
 
   admin:
     answers:
@@ -101,6 +105,10 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+        status: "Статус"
+      test:
+        activated: "Активирован"
+        not_activated: "Не активирован"
       form_inline:
         submit: "ОК"
       show:

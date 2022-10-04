@@ -16,6 +16,13 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, { promt: true } %>
   </p>
 
+  <p>
+    <%= form.label :activated, t('.not_activated') %>
+    <%= form.radio_button :activated, 'false' %><br>
+    <%= form.label :activated, t('.activated') %>
+    <%= form.radio_button :activated, 'true' %>
+  </p>
+
   <p><%= form.submit %></p>
 <% end %>
 
