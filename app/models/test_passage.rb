@@ -34,10 +34,6 @@ class TestPassage < ApplicationRecord
     (self.created_at + self.test.timer * 60) - Time.now
   end
 
-  def how_much_time_left?
-    Time.now - (@test_passage.created_at + @test_passage.test.timer * 60) >= 0
-  end
-
   private
 
   def correct_answer?(answer_ids)

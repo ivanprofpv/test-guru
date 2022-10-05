@@ -21,14 +21,20 @@ class BadgeService
 
   private
 
+  def first_completed?
+    current_question.nil?
+  end
+
   def already_received?(badge)
     @current_user.badges.exclude?(badge)
   end
 
   def first_rule_completed?(badge)
-    tests.joins(:test_passages)
-         .distinct
-         .where(test_passages: { user: @user, passed: true })
+    completed = @current_user.test_passages
+                  .where(test: @current_test, passed: true)
+                  .pluck(:test_id).uniq
+    first_test = TestPassage.where(user: @current_user, test: @current_test)
+    first_test.count == 1 && completed.count == 1
   end
 
   def level_rule_completed?(rule_value)
@@ -42,6 +48,8 @@ class BadgeService
     passed_tests_by_category = tests_passed_success.search_tests_category(rule_value).uniq.count
     all_tests_by_category == passed_tests_by_category
   end
+
+
 
   def tests_passed_success
     @current_user.tests.where("test_passages.passed = true")
