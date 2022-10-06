@@ -5,6 +5,9 @@
     <p class="progress-bar_percentage"></p>
   </div>
 </div>
+<br>
+<%= t('.time_left') %>:
+<div class="timer" data-timer = "<%= @test_passage.get_timer %>"></div>
 
 <div class="mt-3">
   <b><%= t('.question') %> <%= @test_passage.question_number %> /
