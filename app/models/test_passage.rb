@@ -30,10 +30,6 @@ class TestPassage < ApplicationRecord
     self.test.questions.where('id <= ?', current_question.id).count
   end
 
-  def get_timer
-    (self.created_at + self.test.timer * 60) - Time.now
-  end
-
   private
 
   def correct_answer?(answer_ids)
