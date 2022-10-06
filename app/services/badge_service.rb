@@ -21,10 +21,6 @@ class BadgeService
 
   private
 
-  def first_completed?
-    current_question.nil?
-  end
-
   def already_received?(badge)
     @current_user.badges.exclude?(badge)
   end
