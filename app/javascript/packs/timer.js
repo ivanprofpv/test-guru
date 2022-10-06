@@ -9,8 +9,7 @@ document.addEventListener('turbolinks:load', function() {
         timerSelector.innerHTML = Math.round(timer/60)
       }
       if (timer <= 0) {
-        window.location.href = window.location.href + '/result'
-        return
+        document.querySelector('.timer').innerHTML = 'Time is over'
       }
       setTimeout(startTime, 1000);
       timer --

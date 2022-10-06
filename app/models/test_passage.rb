@@ -30,7 +30,7 @@ class TestPassage < ApplicationRecord
   end
 
   def how_much_time_left?
-    Time.now - (@test_passage.created_at + @test_passage.test.timer * 60) >= 0
+    Time.now - (self.created_at + self.test.timer * 60) >= 0
   end
 
   def get_timer

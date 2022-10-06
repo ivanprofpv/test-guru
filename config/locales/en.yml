@@ -65,6 +65,7 @@ en:
       next: "Next"
       gist_question: "Gist question"
       no_question: "This test has no questions yet. Try to come back later."
+      time_left: "Until the end of the test remains (min.)"
     gist:
       success: "Gist was successfully created!"
       failure: "An error occurred while saving gist!"
@@ -118,8 +119,9 @@ en:
         questions: "Questions %{title}"
         actions: "Actions"
         body: "Body"
-        activated: "Activated22"
-        not_activated: "Not activated22"
+        activated: "Activated"
+        not_activated: "Not activated"
+        timer: "Timer"
       new:
         header: "Create new Test"
       edit:

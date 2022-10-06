@@ -67,6 +67,7 @@ ru:
       next: "Далее"
       gist_question: "Отправить в Gist"
       no_question: "У этого теста еще нет вопросов. Попробуйте зайти позже."
+      time_left: "До конца теста осталось (мин.)"
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во время сохранения Gist произошла ошибка!"
@@ -120,6 +121,7 @@ ru:
         questions: "Вопросы %{title}"
         actions: "Действия"
         body: "Тело"
+        timer: "Таймер"
       new:
         header: "Создать новый Тест"
       edit:

@@ -17,9 +17,8 @@ class TestPassagesController < ApplicationController
     end
       @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed? || how_much_time_left?
+    if @test_passage.completed? || @test_passage.how_much_time_left?
       TestsMailer.completed_test(@test_passage).deliver_now
-      BadgeService.new(@test_passage).call
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
