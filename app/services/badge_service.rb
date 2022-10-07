@@ -26,11 +26,8 @@ class BadgeService
   end
 
   def first_rule_completed?(badge)
-    completed = @current_user.test_passages
-                  .where(test: @current_test, passed: true)
-                  .pluck(:test_id).uniq
-    first_test = TestPassage.where(user: @current_user, test: @current_test)
-    first_test.count == 1 && completed.count == 1
+    @test_passage.success_rate? && 
+      TestPassage.where(user: @current_user, test: @current_test).count == 1
   end
 
   def level_rule_completed?(rule_value)
