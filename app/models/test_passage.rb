@@ -29,7 +29,7 @@ class TestPassage < ApplicationRecord
     self.test.questions.where('id <= ?', current_question.id).count
   end
 
-  def how_much_time_left?
+  def time_left?
     Time.now - (self.created_at + self.test.timer * 60) >= 0
   end
 
