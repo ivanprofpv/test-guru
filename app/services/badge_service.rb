@@ -14,9 +14,6 @@ class BadgeService
         @current_user.badges << badge
       end
     end
-
-    if @count_user_badges != @current_user.badges.count
-    end
   end
 
   private
@@ -26,7 +23,6 @@ class BadgeService
   end
 
   def first_rule_completed?(badge)
-    @test_passage.success_rate? && 
       TestPassage.where(user: @current_user, test: @current_test).count == 1
   end
 
