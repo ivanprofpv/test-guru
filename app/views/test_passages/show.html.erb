@@ -1,5 +1,6 @@
 <h2><%= t('.header', title: @test_passage.test.title) %></h2>
-
+<br>
+<%= t('.your_progress') %>:
 <div class="progress-bar-main">
   <div class="progress-bar" data-current-test = "<%= @test_passage.question_number %>" data-all-test = "<%= @test_passage.test.questions.count %>">
     <p class="progress-bar_percentage"></p>

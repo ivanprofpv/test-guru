@@ -8,6 +8,16 @@ admin = Admin.create!(
         confirmed_at: Time.zone.now
        )
 
+user = User.create!(
+        email: 'user@testguru.com',
+        password: 12345678,
+        password_confirmation: 12345678,
+        type: "User",
+        first_name: "FirstName",
+        last_name: "LastName",
+        confirmed_at: Time.zone.now
+        )
+
 backend = Category.create(title: 'Backend')
 fronted = Category.create(title: 'Fronted')
 mobile = Category.create(title: 'mobile')
